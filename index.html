@@ -533,17 +533,14 @@
 <script src="js/controlpanel.js" type="text/javascript"></script>
 <script src="js/custom.js"></script>
 <script>
-    var listQuotes = [
+    let listQuotes = [
         {quote: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."},
         {quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."}
     ];
 
-    var currentQuote = 0;
-    var progress = setInterval(timerProgress, 10);
-    var progressWidth = 0;
-
-    // var timeDisplayed = 10000;
-    // var timer = setInterval(changeQuote, timeDisplayed);
+    let currentQuote = 0;
+    let progress = setInterval(timerProgress, 10);
+    let progressWidth = 0;
 
     function timerProgress() {
         if(progressWidth < 100) {
@@ -560,7 +557,6 @@
 
 
     function changeQuote() {
-        // $("blockquote").fadeToggle( "slow", "linear" );
         if(currentQuote < listQuotes.length - 1){
             currentQuote++;
         } else {
