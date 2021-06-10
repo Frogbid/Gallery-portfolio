@@ -2647,14 +2647,15 @@ header {
     padding: 80px 40px 40px 80px;
     width: 100%;
     float: left;
-    box-sizing: border-box
+    box-sizing: border-box;
+    border: 1px solid white
 }
 
 .portfolio-fullwidth {
-    background: url(images/portfolio-bg.jpg) repeat;
     float: left;
     width: 100%;
-    margin-bottom: 80px
+    margin-bottom: 80px;
+    padding: 50px;
 }
 
 .dt-sc-portfolio-container {
@@ -4068,10 +4069,11 @@ ul.commentlist li .reply a .fa {
 }
 
 .dt-sc-social-icons {
-    float: left;
-    margin: 0;
     text-align: center;
-    width: 100%
+    width: 100%;
+    vertical-align: middle;
+    max-width: 300px;
+    margin: auto;
 }
 
 .dt-sc-social-icons li {
@@ -4084,6 +4086,14 @@ ul.commentlist li .reply a .fa {
 
 .dt-sc-social-icons li.twitter a {
     background: #55acee
+}
+
+.dt-sc-social-icons li.copy-url a {
+    background: #3b3939;
+}
+
+.dt-sc-social-icons li.copy-url a:hover {
+    color: #3b3939;
 }
 
 .dt-sc-social-icons li.twitter a:hover {
