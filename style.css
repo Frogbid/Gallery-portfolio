@@ -37,7 +37,7 @@ body, p, input, textarea, .mailchimp-form p input, input[type=submit], input[typ
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    ::i-block-chrome, .main-title h1, .main-title h2, .main-title h3, .main-title h4, .main-title h5, .main-title h6, .main-title h3, .entry-details .entry-title h3, .about-section h3, .breadcrumb h2, blockquote q, .post-author-details .author-desc p {
+    .main-title h1, .main-title h2, .main-title h3, .main-title h4, .main-title h5, .main-title h6, .main-title h3, .entry-details .entry-title h3, .about-section h3, .breadcrumb h2, blockquote q, .post-author-details .author-desc p {
         font-weight: 300
     }
 }
@@ -234,7 +234,6 @@ hr {
 }
 
 .dt-sc-hr {
-    background: url(images/splitter.html);
     height: 10px;
     width: 100%;
     clear: both;
@@ -1233,7 +1232,6 @@ select option {
     border-color: #555;
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
-    appearance: textfield;
     float: left;
     z-index: 1;
     position: relative
@@ -1288,7 +1286,7 @@ table.shop_table .quantity .plus, table.shop_table .quantity .minus, .product .s
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    ::i-block-chrome, .woocommerce form .form-row input.input-text, .woocommerce-page form .form-row input.input-text, .woocommerce form .form-row textarea, .woocommerce-page form .form-row textarea {
+    .woocommerce form .form-row input.input-text, .woocommerce-page form .form-row input.input-text, .woocommerce form .form-row textarea, .woocommerce-page form .form-row textarea {
         resize: none
     }
 }
@@ -2380,7 +2378,6 @@ header {
 }
 
 .slider {
-    background-image: url(images/slider.jpg);
     background-repeat: no-repeat;
     backface-visibility: hidden;
     display: table;
@@ -2443,21 +2440,19 @@ header {
 }
 
 .parallax-img {
-    background: url(images/parallax-img.html);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat
 }
 
 .dark-skin .parallax-img {
-    background: url(images/parallax-img-dark.html);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat
 }
 
 .parallax-img:after, .map-parallax:after {
-    background: url(images/copy-right-shape.html) no-repeat center center;
+    background: no-repeat center center;
     content: "";
     height: 149px;
     left: 0;
@@ -2473,7 +2468,7 @@ header {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    ::i-block-chrome, .parallax {
+    .parallax {
         position: static
     }
 }
@@ -2531,7 +2526,6 @@ header {
 }
 
 .main-title::before {
-    background: url(images/title-line.png) no-repeat;
     bottom: -15px;
     content: "";
     display: block;
@@ -2593,7 +2587,6 @@ header {
 }
 
 .sub-title::before {
-    background: url(images/sub-title.png) no-repeat;
     bottom: -20px;
     content: "";
     display: block;
@@ -2604,10 +2597,6 @@ header {
     position: absolute;
     right: 0;
     width: 100%
-}
-
-.center.sub-title::before {
-    background: url(images/title-line.png) no-repeat scroll 50% center
 }
 
 .right.sub-title::before {
@@ -2979,7 +2968,7 @@ header {
     float: right
 }
 
-::i-block-chrome, .bx-controls a {
+.bx-controls a {
     padding: 18px 0
 }
 
@@ -3693,7 +3682,7 @@ ul.commentlist li .reply a .fa {
     width: auto
 }
 
-::i-block-chrome, .blog-section .blog-entry .bx-controls .bx-controls-direction a {
+.blog-section .blog-entry .bx-controls .bx-controls-direction a {
     padding: 18px 0
 }
 
@@ -3803,28 +3792,24 @@ ul.commentlist li .reply a .fa {
 }
 
 .dt-sc-frame-container .frame.ceramic > figure::before {
-    background-image: url(images/gold-frame.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%
 }
 
 .dt-sc-frame-container .frame.wooden > figure::before {
-    background-image: url(images/wooden-frame.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%
 }
 
 .dt-sc-frame-container .frame.steel > figure::before {
-    background-image: url(images/steel-frame.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%
 }
 
 .dt-sc-frame-container .frame.plastic > figure::before {
-    background-image: url(images/plastic-frame.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%
@@ -4247,7 +4232,7 @@ ul.commentlist li .reply a .fa {
     margin-bottom: 0
 }
 
-::i-block-chrome, .dt-sc-contact-details {
+.dt-sc-contact-details {
     font-weight: 500
 }
 
@@ -4291,7 +4276,6 @@ ul.commentlist li .reply a .fa {
 }
 
 .dt-sc-contact-info::before {
-    background: url(images/contact-form-bg.png) no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
     bottom: 0;
@@ -5074,7 +5058,7 @@ ul.commentlist li .reply a .fa {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    ::i-block-chrome, .products .product-thumb img, .dt-sc-portfolio-container .portfolio figure img, .portfolio figcaption, .portfolio figcaption::before {
+   .products .product-thumb img, .dt-sc-portfolio-container .portfolio figure img, .portfolio figcaption, .portfolio figcaption::before {
         -webkit-transition: all 300ms linear 0s;
         -moz-transition: all 300ms linear 0s;
         -o-transition: all 300ms linear 0s;
@@ -5169,7 +5153,6 @@ ul.commentlist li .reply a .fa {
 }
 
 #footer::before {
-    background: url(images/title-line.png) repeat-x;
     content: "";
     height: 20px;
     position: absolute;
@@ -5382,10 +5365,9 @@ ul.commentlist li .reply a .fa {
     border: 0
 }
 
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+@media only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
     #toTop {
         background-size: 40px 120px;
-        background-image: url(images/ui.totop%402x.html)
     }
 
     input, button {
@@ -5393,7 +5375,6 @@ ul.commentlist li .reply a .fa {
     }
 
     .main-title::before, #footer::before {
-        background-image: url(images/title-line%402x.png);
         background-size: 496px 19px
     }
 }
