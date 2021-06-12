@@ -33,7 +33,7 @@
         <div id="header-wrapper" class="dt-sticky-menu">
             <div id="header" class="header">
                 <div class="container menu-container">
-                    <a class="logo" href="index.html"><img alt="Logo" src="images/logo.png"></a>
+                    <a class="logo" href="index.html"><img alt="Logo" src="images/assets/logo-final.png"></a>
                     <a href="#" class="menu-trigger">
                         <span></span>
                     </a>
@@ -45,77 +45,35 @@
                     <span class="dt-menu-toggle-icon"></span>
                 </div>
                 <ul class="menu type1">
-                    <li class="menu-item-simple-parent"><a href="index.html">Home <span class="fa fa-home"></span></a>
-                        <ul class="sub-menu">
-                            <li><a href="http://www.wedesignthemes.com/html/redart/default">Default</a></li>
-                            <li><a href="http://www.wedesignthemes.com/html/redart/menu-overlay">Menu Overlay</a></li>
-                            <li><a href="http://www.wedesignthemes.com/html/redart/slide-bar">Slide Bar</a></li>
-                            <li><a href="http://www.wedesignthemes.com/html/redart/slider-over-menu">Slider Over
-                                Menu</a></li>
-                        </ul>
-                        <a class="dt-menu-expand">+</a>
+                    <li class="current_page_item menu-item-simple-parent"><a href="index.html">Home <span
+                            class="fa fa-home"></span></a>
                     </li>
                     <li class="menu-item-simple-parent">
                         <a href="about.html">About us <span class="fa fa-user-secret"></span></a>
                     </li>
-                    <li class="current_page_item menu-item-simple-parent"><a href="gallery.html">Gallery <span
+                    <li class="menu-item-simple-parent"><a href="gallery.html">Gallery <span
                             class="fa fa-camera-retro"></span></a>
                         <ul class="sub-menu">
-                            <li class="current_page_item"><a href="gallery-detail.html">Gallery detail</a></li>
-                            <li><a href="gallery-detail-with-lhs.html">Gallery-detail-left-sidebar</a></li>
-                            <li><a href="gallery-detail-with-rhs.html">Gallery-detail-right-sidebar</a></li>
-                        </ul>
-                        <a class="dt-menu-expand">+</a>
-                    </li>
-                    <li class="menu-item-simple-parent"><a href="shop.html">Shop <span
-                            class="fa fa-cart-plus"></span></a>
-                        <ul class="sub-menu">
-                            <li><a href="shop-detail.html">Shop Detail</a></li>
-                            <li><a href="shop-cart.html">Cart Page</a></li>
-                            <li><a href="shop-checkout.html">Checkout Page</a></li>
-                        </ul>
-                        <a class="dt-menu-expand">+</a>
-                    </li>
-                    <li class="menu-item-simple-parent"><a href="blog.html">Blog <span
-                            class="fa fa-pencil-square-o"></span></a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-detail.html">Blog detail</a></li>
-                            <li><a href="blog-detail-with-lhs.html">Blog-detail-left-sidebar</a></li>
-                            <li><a href="blog-detail-with-rhs.html">Blog-detail-right-sidebar</a></li>
+                            <li><a href="gallery-detail.html">Gallery detail</a></li>
                         </ul>
                         <a class="dt-menu-expand">+</a>
                     </li>
                     <li class="menu-item-simple-parent">
-                        <a href="contact.html">contact <span class="fa fa-map-marker"></span></a>
-                    </li>
-                    <li class="menu-item-simple-parent">
-                        <a href="progressbar.html">shortcodes <span class="fa fa-paint-brush"></span></a>
-                        <ul class="sub-menu">
-                            <li><a href="progressbar.html"> Progress-bar </a></li>
-                            <li><a href="buttons.html"> Buttons Page </a></li>
-                            <li><a href="tabs.html"> tabs-accordions </a></li>
-                            <li><a href="typography.html"> typography </a></li>
-                            <li><a href="columns.html"> columns </a></li>
-                        </ul>
-                        <a class="dt-menu-expand">+</a>
+                        <a href="contact.html">contact<span class="fa fa-map-marker"></span></a>
                     </li>
                 </ul>
             </nav>
         </div>
+
+
+        <!--<div class="slider-container">
+            <div class="slider fullwidth-section parallax"></div>
+        </div>-->
         <div id="main">
             <div class="breadcrumb">
                 <div class="container">
                     <h2>Gallery <span>Detail</span></h2>
-                    <div class="user-summary">
-                        <div class="account-links">
-                            <a href="#">My Account</a>
-                            <a href="#">Checkout</a>
-                        </div>
-                        <div class="cart-count">
-                            <a href="#">Shopping Bag: 0 items</a>
-                            <a href="#">($0.00)</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="container">
@@ -144,7 +102,16 @@
                                                                           alt='image'/></a>
                                 </div>
                             </div>-->
-                            <img src="images/gallery/demo_gallery_image_1.png" alt="image"/>
+                            <script>
+                                let queryString = window.location.search;
+                                let urlParams = new URLSearchParams(queryString);
+                                let image_type = urlParams.get('image_type');
+                                console.log(image_type);
+                                let image_name = urlParams.get('image_name');
+                                console.log(image_name);
+                                console.log("images/gallery/"+image_type+"/"+image_name);
+                                document.write('<img src='+"images/gallery/"+image_type+"/"+image_name+" alt='image'/>");
+                            </script>
                         </div>
                         <div class="dt-sc-hr-invisible-small"></div>
                         <div class="dt-sc-portfolio-container column first animate" data-animation="fadeInLeft" data-delay="100">
@@ -204,108 +171,561 @@
             <div class="portfolio-fullwidth">
                 <div class="portfolio-grid">
                     <div class="dt-sc-portfolio-container isotope">
-                        <div class="portfolio nature still-life dt-sc-one-fourth">
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
                             <figure>
-                                <img src="images/portfolio-images/img-7.jpg" alt="" title="">
+                                <img src="images/gallery/cg/0003_Easy-Resize.com.jpg" alt="" title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
                                             <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
-                                               href="images/portfolio-images/img-7.jpg"></a><span>5</span>
+                                               href="images/gallery/cg/0003_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html">Stay single</a></h5>
-                                            <p>Make Way</p>
+                                            <h5><a href="gallery-detail.html">Untitled</a></h5>
+                                            <p>November 5, 2020</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="portfolio people still-life dt-sc-one-fourth">
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
                             <figure>
-                                <img src="images/portfolio-images/img-9.jpg" alt="" title="">
+                                <img src="images/gallery/illustrations/0210902_Easy-Resize.com.jpg" alt=""
+                                     title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
                                             <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
-                                               href="images/portfolio-images/img-9.jpg"></a><span>15</span>
+                                               href="images/gallery/illustrations/0210902_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail-with-rhs.html">Stand Tall</a></h5>
-                                            <p>Hard to Settle!!</p>
+                                            <h5><a href="gallery-detail-with-lhs.html">0210902</a></h5>
+                                            <p>February 9, 2021</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="portfolio people still-life dt-sc-one-fourth">
+
+                        <div class="portfolio laltip dt-sc-one-fourth">
                             <figure>
-                                <img src="images/portfolio-images/img-1.jpg" alt="" title="">
+                                <img src="images/gallery/lal%20tip/tip-5_Easy-Resize.com.jpg" alt="" title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
                                             <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
-                                               href="images/portfolio-images/img-1.jpg"></a><span>3</span>
+                                               href="images/gallery/lal%20tip/tip-5_Easy-Resize.com.jpg"></a><span>15</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html">Proposing Love</a></h5>
-                                            <p>Sample text here looks good</p>
+                                            <h5><a href="gallery-detail-with-rhs.html">Lal Tip-5</a></h5>
+                                            <p>January 25, 2020</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="portfolio people nature still-life street dt-sc-one-fourth">
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
                             <figure>
-                                <img src="images/portfolio-images/img-12.jpg" alt="" title="">
+                                <img src="images/gallery/cg/hosna-ara-ku_Easy-Resize.com.jpg" alt="" title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
                                             <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
-                                               href="images/portfolio-images/img-12.jpg"></a><span>12</span>
+                                               href="images/gallery/cg/hosna-ara-ku_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail-with-lhs.html">Born to Ride</a></h5>
-                                            <p>Cowboys are born, ain't made!</p>
+                                            <h5><a href="gallery-detail.html">Hosna Ara Begum</a></h5>
+                                            <p>October 30, 2020</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="portfolio nature people street still-life dt-sc-one-fourth">
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
                             <figure>
-                                <img src="images/portfolio-images/img-8.jpg" alt="" title="">
+                                <img src="images/gallery/illustrations/0210102_Easy-Resize.com.jpg" alt=""
+                                     title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
                                             <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
-                                               href="images/portfolio-images/img-8.jpg"></a><span>12</span>
+                                               href="images/gallery/illustrations/0210102_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail-with-lhs.html">Born to Ride</a></h5>
-                                            <p>Cowboys are born, ain't made!</p>
+                                            <h5><a href="gallery-detail-with-lhs.html">0210102</a></h5>
+                                            <p>February 1, 2021</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="portfolio street nature people still-life dt-sc-one-fourth">
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
                             <figure>
-                                <img src="images/portfolio-images/img-10.jpg" alt="" title="">
+                                <img src="images/gallery/illustrations/0210702_Easy-Resize.com.jpg" alt=""
+                                     title="">
                                 <figcaption>
                                     <div class="portfolio-detail">
                                         <div class="views">
                                             <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
-                                               href="images/portfolio-images/img-10.jpg"></a><span>5</span>
+                                               href="images/gallery/illustrations/0210702_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html">Stay single</a></h5>
-                                            <p>Make Way</p>
+                                            <h5><a href="gallery-detail-with-lhs.html">0210702</a></h5>
+                                            <p>February 7, 2021</p>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                         </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/mukta-apu_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/mukta-apu_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Mukta Rahman</a></h5>
+                                            <p>April 29, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0210302_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0210302_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">020302</a></h5>
+                                            <p>March 2, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/police-cap---v2_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/police-cap---v2_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Untitled</a></h5>
+                                            <p>October 9, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio laltip dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/lal%20tip/tip-3_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/lal%20tip/tip-3_Easy-Resize.com.jpg"></a><span>15</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-rhs.html">Lal Tip-3</a></h5>
+                                            <p>January 21, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/president-sir_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/president-sir_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Untitled</a></h5>
+                                            <p>October 20, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/rayta-final_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/rayta-final_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Rayta Hasan</a></h5>
+                                            <p>May 16, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0211202_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0211202_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">0211202</a></h5>
+                                            <p>February 12, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/rikto-vai-2_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/rikto-vai-2_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Rikto</a></h5>
+                                            <p>February 3, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio laltip dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/lal%20tip/tip_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/lal%20tip/tip_Easy-Resize.com.jpg"></a><span>15</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-rhs.html">Lal Tip-1</a></h5>
+                                            <p>January 1, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/rikto-vai-w-1-v2_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/rikto-vai-w-1-v2_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Untitled</a></h5>
+                                            <p>September 13, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio laltip dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/lal%20tip/tip-2_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/lal%20tip/tip-2_Easy-Resize.com.jpg"></a><span>15</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-rhs.html">Lal Tip-2</a></h5>
+                                            <p>January 20, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0210202_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0210202_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">0210202</a></h5>
+                                            <p>February 2, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0211102_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0211102_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">0211102</a></h5>
+                                            <p>February 11, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio laltip dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/lal%20tip/tip-4_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/lal%20tip/tip-4_Easy-Resize.com.jpg"></a><span>15</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-rhs.html">Lal Tip-4</a></h5>
+                                            <p>January 23, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/rob-2_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/rob-2_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">S. M. Abdur Rob</a></h5>
+                                            <p>May 7, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/sajal-sir_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/sajal-sir_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Sajal Majumder</a></h5>
+                                            <p>August 9, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0210502_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0210502_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">0210502</a></h5>
+                                            <p>May 2, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/sunny-vai-2_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/sunny-vai-2_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Mehedi hasan Sunny</a></h5>
+                                            <p>October 4, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/swarnakamal-sir_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/swarnakamal-sir_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Swarnakamal Roy</a></h5>
+                                            <p>October 7, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0210602_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0210602_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">02100602</a></h5>
+                                            <p>February 6, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0211302_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0211302_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">0211302</a></h5>
+                                            <p>February 13, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/tipu_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/tipu_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Tipu Sangma</a></h5>
+                                            <p>January 16, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio illustration dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/illustrations/0210402_Easy-Resize.com.jpg" alt=""
+                                     title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/illustrations/0210402_Easy-Resize.com.jpg"></a><span>12</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail-with-lhs.html">0210402</a></h5>
+                                            <p>April 2, 2021</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="portfolio digitalportrait dt-sc-one-fourth">
+                            <figure>
+                                <img src="images/gallery/cg/w4-v2-_Easy-Resize.com.jpg" alt="" title="">
+                                <figcaption>
+                                    <div class="portfolio-detail">
+                                        <div class="views">
+                                            <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]"
+                                               href="images/gallery/cg/w4-v2-_Easy-Resize.com.jpg"></a><span>3</span>
+                                        </div>
+                                        <div class="portfolio-title">
+                                            <h5><a href="gallery-detail.html">Untitled</a></h5>
+                                            <p>february 3, 2020</p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -319,13 +739,12 @@
                             <li><a href="#">Faq</a></li>
                         </ul>
                         <ul class="payment-options">
-                            <li><a href="#" class="fa fa-cc-amex"></a></li>
-                            <li><a href="#" class="fa fa-cc-mastercard"></a></li>
-                            <li><a href="#" class="fa fa-cc-visa"></a></li>
-                            <li><a href="#" class="fa fa-cc-discover"></a></li>
-                            <li><a href="#" class="fa fa-cc-paypal"></a></li>
+                            <li class="twitter"><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                            <li class="facebook"><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                            <li class="google"><a href="#"> <i class="fa fa-google"></i> </a></li>
+                            <li class="dribbble"><a href="#"> <i class="fa fa-dribbble"></i> </a></li>
                         </ul>
-                        <p>© 2015 <a href="#">RED ART</a>. All rights reserved.</p>
+                        <p>© 2015 <a href="#">Biplob K Mondol</a>. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
