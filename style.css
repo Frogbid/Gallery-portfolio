@@ -3837,13 +3837,15 @@ ul.commentlist li .reply a .fa {
     margin-bottom: 15px;
     padding: 0;
     text-transform: uppercase;
-    width: 100%
+    width: 100%;
+    text-align: center;
 }
 
 .about-section p {
     float: left;
     margin-bottom: 50px;
-    width: 100%
+    width: 100%;
+    text-align: center;
 }
 
 .mailchimp-form, #commentform, .enquiry-form {
