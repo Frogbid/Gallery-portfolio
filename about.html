@@ -8,7 +8,7 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/assets/fav-icon.png" type="image/x-icon"/>
 
     <link id="default-css" rel="stylesheet" href="style.css" type="text/css" media="all"/>
 
@@ -25,11 +25,12 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>
-<!--<div class="loader-wrapper">
+<div class="loader-wrapper">
     <div id="large-header" class="large-header">
-        <h1 class="loader-title"><span>Red</span> Art</h1>
+
+        <h1 class="loader-title"><img src="images/assets/preloder.png"><br><img src="images/assets/please.gif" height="50px"> </span> </h1>
     </div>
-</div>-->
+</div>
 
 <div class="wrapper">
     <div class="inner-wrapper">
@@ -102,8 +103,8 @@
                                          data-delay="100">
                                         <h6>About Me</h6>
                                         <p><span>Name:</span>Biplob K Mondol</p>
-                                        <p><span>Age:</span>26</p>
-                                        <p><span>Date of Birth:</span>26 March, 1995</p>
+                                        <p><span>City:</span>Khulna</p>
+                                        <p><span>Date of Birth:</span>26 March</p>
                                         <div class="dt-sc-hr-invisible-very-small"></div>
                                         <!--<p>Lorem ipsum dolor sit amet elit elit elit elit, consectetur adipiscing elit,
                                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
@@ -115,35 +116,36 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="dt-sc-one-half column">
-                            <div class="dt-sc-icon-content-wrapper left">
-                                <div class="dt-sc-one-half column first dt-sc-icon-wrapper">
-                                    <div class="dt-sc-icon"><!--<i class="fa fa-paint-brush animate"
-                                                               data-animation="fadeInRight" data-delay="100"></i>--></div>
-                                </div>
-                                <div class="dt-sc-one-half column">
+
+                        <div class="column">
+                            <div class="dt-sc-icon-content-wrapper left" style="margin-right: -90px;">
+                                <div class="column">
                                     <div class="dt-sc-ico-content animate" data-animation="fadeInLeft" data-delay="100">
                                         <h6>Education</h6>
-                                        <p><span>London:</span> Jan 2nd to Feb 12th</p>
-                                        <p><span>France:</span> Mar 5th to Apr 18th</p>
-                                        <p><span>Germany:</span> Sep 22nd to Nov 1st</p>
-                                        <p><span>Australia:</span> Nov 21st to Dec 25th</p>
-                                        <p><span>Rome:</span> Vacation</p>
+                                        <p><span>MFA:</span> <span>2018/19-2021</span> &nbsp;&nbsp;<span>University of Dhaka (Fine Art)</span></p>
+                                        <p><span>BFA:</span> <span>2014/15-2019</span> &nbsp;&nbsp;<span>University of Dhaka  (Fine Art)</span></p>
+                                        <p><span>HSC:</span> <span>2014</span> &nbsp;&nbsp;<span>Govt. Sundarban Adarsha College</span></p>
+                                        <p><span>SSC:</span> <span>2012</span> &nbsp;&nbsp;<span>ST. Joseph's High School, Khulna</span></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="dt-sc-one-half column">
-                            <div class="dt-sc-icon-content-wrapper">
+                            <div class="dt-sc-icon-content-wrapper right">
                                 <div class="dt-sc-one-half column first">
                                     <div class="dt-sc-ico-content animate" data-animation="fadeInRight"
                                          data-delay="100">
-                                        <h6>Get in touch</h6>
-                                        <p><i class="fa fa-map-marker"></i>109, KimAvenue, Baltimore, USA</p>
-                                        <p><i class="fa fa-phone"></i> +880 16766 17867 2145</p>
-                                        <p><i class="fa fa-envelope"></i><a href="#"><span class="__cf_email__"
-                                                                                           data-cfemail="f0a29594b18284b0979d91999cde939f9d">me@biplobkmonol.com</span></a>
-                                        </p>
+                                        <h6>Skills</h6>
+                                        <p>Ceramic</p>
+                                        <p>Drawing & Painting</p>
+                                        <p>Adobe Photoshop</p>
+                                        <p>Adobe Illustrator</p>
+                                        <p>Adobe After Effect</p>
+                                        <p>Adobe Premier Pro</p>
+                                        <p>Adobe Animation</p>
+                                        <p>C4D</p>
+                                        <p>ZBrush</p>
+
                                         <!--<div class="dt-sc-hr-invisible-very-small"></div>
                                         <h6>Follow us on</h6>
                                         <ul class="type3 dt-sc-social-icons">
@@ -160,9 +162,39 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
+
+            <!-- Messenger Chat plugin Code -->
+            <div id="fb-root"></div>
+
+            <!-- Your Chat plugin code -->
+            <div id="fb-customer-chat" class="fb-customerchat">
+            </div>
+
+            <script>
+                var chatbox = document.getElementById('fb-customer-chat');
+                chatbox.setAttribute("page_id", "115420723162727");
+                chatbox.setAttribute("attribution", "biz_inbox");
+
+                window.fbAsyncInit = function() {
+                    FB.init({
+                        xfbml            : true,
+                        version          : 'v11.0'
+                    });
+                };
+
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+
             <footer id="footer" class="animate" data-animation="fadeIn" data-delay="100">
                 <div class="container">
                     <div class="copyright">
@@ -181,7 +213,7 @@
                             <li class="twitter"><a href="https://www.linkedin.com/in/biplobkmondol/"> <i class="fa fa-linkedin"></i> </a></li>
                             <li class="dribbble"><a href="https://dribbble.com/biplobkmondol"> <i class="fa fa-dribbble"></i> </a></li>
                         </ul>
-                        <p>© 2015 <a href="#">Biplob K Mondol</a>. All rights reserved.</p>
+                        <p>© 2021 &nbsp <a href="#">Biplob K Mondol</a>. All rights reserved.</p>
                     </div>
                 </div>
             </footer>

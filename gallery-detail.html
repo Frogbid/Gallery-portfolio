@@ -5,7 +5,7 @@
     <title>Biplob K Mondol</title>
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/assets/fav-icon.png" type="image/x-icon"/>
 
     <link id="default-css" rel="stylesheet" href="style.css" type="text/css" media="all"/>
 
@@ -22,11 +22,12 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
 </head>
 <body>
-<!--<div class="loader-wrapper">
+<div class="loader-wrapper">
     <div id="large-header" class="large-header">
-        <h1 class="loader-title"><span>Red</span> Art</h1>
+
+        <h1 class="loader-title"><img src="images/assets/preloder.png"><br><img src="images/assets/please.gif" height="50px"> </span> </h1>
     </div>
-</div>-->
+</div>
 
 <div class="wrapper">
     <div class="inner-wrapper">
@@ -722,6 +723,35 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Messenger Chat plugin Code -->
+            <div id="fb-root"></div>
+
+            <!-- Your Chat plugin code -->
+            <div id="fb-customer-chat" class="fb-customerchat">
+            </div>
+
+            <script>
+                var chatbox = document.getElementById('fb-customer-chat');
+                chatbox.setAttribute("page_id", "115420723162727");
+                chatbox.setAttribute("attribution", "biz_inbox");
+
+                window.fbAsyncInit = function() {
+                    FB.init({
+                        xfbml            : true,
+                        version          : 'v11.0'
+                    });
+                };
+
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+
             <footer id="footer" class="animate" data-animation="fadeIn" data-delay="100">
                 <div class="container">
                     <div class="copyright">
@@ -740,7 +770,7 @@
                             <li class="twitter"><a href="https://www.linkedin.com/in/biplobkmondol/"> <i class="fa fa-linkedin"></i> </a></li>
                             <li class="dribbble"><a href="https://dribbble.com/biplobkmondol"> <i class="fa fa-dribbble"></i> </a></li>
                         </ul>
-                        <p>© 2015 <a href="#">Biplob K Mondol</a>. All rights reserved.</p>
+                        <p>© 2021 &nbsp <a href="#">Biplob K Mondol</a>. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
