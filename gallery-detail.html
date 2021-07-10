@@ -104,12 +104,21 @@
                                 let image_name = urlParams.get('image_name');
                                 console.log(image_name);
                                 console.log("images/gallery/"+image_type+"/"+image_name);
-                                document.write('<img src='+"images/gallery/"+image_type+"/"+image_name+" alt='image'/>");
+                                if(image_type!='lal tip')
+                                    document.write('<img src='+"images/gallery/"+image_type+"/"+image_name+" alt='image'/>");
+                                else
+                                    document.write('<img src='+"images/gallery/lal%20tip/"+image_name+" alt='image'/>");
                             </script>
                         </div>
                         <div class="dt-sc-hr-invisible-small"></div>
                         <div class="dt-sc-portfolio-container column first animate" data-animation="fadeInLeft" data-delay="100">
-                            <h3>Live Free, Ride Hard</h3>
+
+                                <script>
+                                    let name = urlParams.get('name');
+                                    let date = urlParams.get('date');
+                                    document.write('<h3>'+name+'</h3><p>'+date+'</p>');
+                                </script>
+
                             <!--<p> Red art sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
                                 ut laoreet dolore magna aliquam erat volutpat.Contrary to popular belief, Lorem Ipsum is
                                 not simply random text. It has roots in a piece of classical Latin literature from 45
@@ -176,7 +185,7 @@
                                                href="images/gallery/cg/0003_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=0003_Easy-Resize.com.jpg">Untitled</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=0003_Easy-Resize.com.jpg&name=Untitled&date=November 5, 2020">Untitled</a></h5>
                                             <p>November 5, 2020</p>
                                         </div>
                                     </div>
@@ -195,7 +204,7 @@
                                                href="images/gallery/illustrations/0210902_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0003_Easy-Resize.com.jpg">0210902</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0003_Easy-Resize.com.jpg&name=0210902&date=February 9, 2021">0210902</a></h5>
                                             <p>February 9, 2021</p>
                                         </div>
                                     </div>
@@ -213,7 +222,7 @@
                                                href="images/gallery/lal%20tip/tip-5_Easy-Resize.com.jpg"></a><span>15</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-5_Easy-Resize.com.jpg">Lal Tip-5</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-5_Easy-Resize.com.jpg&name=Lal Tip-5&date=January 25, 2020">Lal Tip-5</a></h5>
                                             <p>January 25, 2020</p>
                                         </div>
                                     </div>
@@ -231,7 +240,7 @@
                                                href="images/gallery/cg/hosna-ara-ku_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=hosna-ara-ku_Easy-Resize.com.jpg">Hosna Ara Begum</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=hosna-ara-ku_Easy-Resize.com.jpg&name=Hosna Ara Begum&date=October 30, 2020">Hosna Ara Begum</a></h5>
                                             <p>October 30, 2020</p>
                                         </div>
                                     </div>
@@ -250,7 +259,7 @@
                                                href="images/gallery/illustrations/0210102_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210102_Easy-Resize.com.jpg">0210102</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210102_Easy-Resize.com.jpg&name=0210102&date=February 1, 2021">0210102</a></h5>
                                             <p>February 1, 2021</p>
                                         </div>
                                     </div>
@@ -269,7 +278,7 @@
                                                href="images/gallery/illustrations/0210702_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210702_Easy-Resize.com.jpg">0210702</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210702_Easy-Resize.com.jpg&name=0210702&date=February 7, 2021">0210702</a></h5>
                                             <p>February 7, 2021</p>
                                         </div>
                                     </div>
@@ -287,7 +296,7 @@
                                                href="images/gallery/cg/mukta-apu_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=mukta-apu_Easy-Resize.com.jpg">Mukta Rahman</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=portfolio&image_name=mukta-details_Easy-Resize.com.jpg&name=Mukta Rahman&date=April 29, 2021">Mukta Rahman</a></h5>
                                             <p>April 29, 2021</p>
                                         </div>
                                     </div>
@@ -306,7 +315,7 @@
                                                href="images/gallery/illustrations/0210302_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210302_Easy-Resize.com.jpg">020302</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210302_Easy-Resize.com.jpg&name=020302&date=March 2, 2021">020302</a></h5>
                                             <p>March 2, 2021</p>
                                         </div>
                                     </div>
@@ -325,7 +334,7 @@
                                                href="images/gallery/cg/police-cap---v2_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=police-cap---v2_Easy-Resize.com.jpg">Untitled</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=police-cap---v2_Easy-Resize.com.jpg&name=Untitled&date=October 9, 2020">Untitled</a></h5>
                                             <p>October 9, 2020</p>
                                         </div>
                                     </div>
@@ -343,7 +352,7 @@
                                                href="images/gallery/lal%20tip/tip-3_Easy-Resize.com.jpg"></a><span>15</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-3_Easy-Resize.com.jpg">Lal Tip-3</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-3_Easy-Resize.com.jpg&name=Lal Tip-3&date=January 21, 2020">Lal Tip-3</a></h5>
                                             <p>January 21, 2020</p>
                                         </div>
                                     </div>
@@ -361,7 +370,7 @@
                                                href="images/gallery/cg/president-sir_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=president-sir_Easy-Resize.com.jpg">Untitled</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=president-sir_Easy-Resize.com.jpg&name=Untitled&date=October 20, 2020">Untitled</a></h5>
                                             <p>October 20, 2020</p>
                                         </div>
                                     </div>
@@ -379,7 +388,7 @@
                                                href="images/gallery/cg/rayta-final_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=rayta-final_Easy-Resize.com.jpg">Rayta Hasan</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=portfolio&image_name=RAYTA-DETAILS_Easy-Resize.com.jpg&name=Rayta Hasan&date=May 16, 2021">Rayta Hasan</a></h5>
                                             <p>May 16, 2021</p>
                                         </div>
                                     </div>
@@ -398,7 +407,7 @@
                                                href="images/gallery/illustrations/0211202_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0211202_Easy-Resize.com.jpg">0211202</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0211202_Easy-Resize.com.jpg&name=0211202&date=February 12, 2021">0211202</a></h5>
                                             <p>February 12, 2021</p>
                                         </div>
                                     </div>
@@ -416,7 +425,7 @@
                                                href="images/gallery/cg/rikto-vai-2_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=rikto-vai-2_Easy-Resize.com.jpg">Rikto</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=portfolio&image_name=RIKTO_Easy-Resize.com.jpg&name=Rikto&date=February 3, 2021">Rikto</a></h5>
                                             <p>February 3, 2021</p>
                                         </div>
                                     </div>
@@ -434,7 +443,7 @@
                                                href="images/gallery/lal%20tip/tip_Easy-Resize.com.jpg"></a><span>15</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip_Easy-Resize.com.jpg">Lal Tip-1</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip_Easy-Resize.com.jpg&name=Lal Tip-1&date=January 1, 2020">Lal Tip-1</a></h5>
                                             <p>January 1, 2020</p>
                                         </div>
                                     </div>
@@ -453,7 +462,7 @@
                                                href="images/gallery/cg/rikto-vai-w-1-v2_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=rikto-vai-w-1-v2_Easy-Resize.com.jpg">Untitled</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=rikto-vai-w-1-v2_Easy-Resize.com.jpg&name=Untitled&date=September 13, 2020">Untitled</a></h5>
                                             <p>September 13, 2020</p>
                                         </div>
                                     </div>
@@ -471,7 +480,7 @@
                                                href="images/gallery/lal%20tip/tip-2_Easy-Resize.com.jpg"></a><span>15</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-2_Easy-Resize.com.jpg">Lal Tip-2</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-2_Easy-Resize.com.jpg&name=Lal Tip-2&date=January 20, 2020">Lal Tip-2</a></h5>
                                             <p>January 20, 2020</p>
                                         </div>
                                     </div>
@@ -490,7 +499,7 @@
                                                href="images/gallery/illustrations/0210202_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210202_Easy-Resize.com.jpg">0210202</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210202_Easy-Resize.com.jpg&name=0210202&date=February 2, 2021">0210202</a></h5>
                                             <p>February 2, 2021</p>
                                         </div>
                                     </div>
@@ -509,7 +518,7 @@
                                                href="images/gallery/illustrations/0211102_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0211102_Easy-Resize.com.jpg">0211102</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0211102_Easy-Resize.com.jpg&name=0211102&date=February 11, 2021">0211102</a></h5>
                                             <p>February 11, 2021</p>
                                         </div>
                                     </div>
@@ -527,7 +536,7 @@
                                                href="images/gallery/lal%20tip/tip-4_Easy-Resize.com.jpg"></a><span>15</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-4_Easy-Resize.com.jpg">Lal Tip-4</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=lal%20tip&image_name=tip-4_Easy-Resize.com.jpg&name=Lal Tip-4&date=January 23, 2020">Lal Tip-4</a></h5>
                                             <p>January 23, 2020</p>
                                         </div>
                                     </div>
@@ -545,7 +554,7 @@
                                                href="images/gallery/cg/rob-2_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=rob-2_Easy-Resize.com.jpg">S. M. Abdur Rob</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=rob-2_Easy-Resize.com.jpg&name=S. M. Abdur Rob&date=May 7, 2020">S. M. Abdur Rob</a></h5>
                                             <p>May 7, 2020</p>
                                         </div>
                                     </div>
@@ -563,7 +572,7 @@
                                                href="images/gallery/cg/sajal-sir_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=sajal-sir_Easy-Resize.com.jpg">Sajal Majumder</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=portfolio&image_name=SAJAL_MAJUMDER_Easy-Resize.com.jpg&name=Sajal Majumder&date=August 9, 2020">Sajal Majumder</a></h5>
                                             <p>August 9, 2020</p>
                                         </div>
                                     </div>
@@ -582,7 +591,7 @@
                                                href="images/gallery/illustrations/0210502_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210502_Easy-Resize.com.jpg">0210502</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210502_Easy-Resize.com.jpg&name=0210502&date=May 2, 2021">0210502</a></h5>
                                             <p>May 2, 2021</p>
                                         </div>
                                     </div>
@@ -600,7 +609,7 @@
                                                href="images/gallery/cg/sunny-vai-2_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=sunny-vai-2_Easy-Resize.com.jpg">Mehedi hasan Sunny</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=sunny-vai-2_Easy-Resize.com.jpg&name=Mehedi hasan Sunny&date=October 4, 2020">Mehedi hasan Sunny</a></h5>
                                             <p>October 4, 2020</p>
                                         </div>
                                     </div>
@@ -619,7 +628,7 @@
                                                href="images/gallery/cg/swarnakamal-sir_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=swarnakamal-sir_Easy-Resize.com.jpg">Swarnakamal Roy</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=swarnakamal-sir_Easy-Resize.com.jpg&name=Swarnakamal Roy&date=October 7, 2020">Swarnakamal Roy</a></h5>
                                             <p>October 7, 2020</p>
                                         </div>
                                     </div>
@@ -638,7 +647,7 @@
                                                href="images/gallery/illustrations/0210602_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210602_Easy-Resize.com.jpg">02100602</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210602_Easy-Resize.com.jpg&name=02100602&date=February 6, 2021">02100602</a></h5>
                                             <p>February 6, 2021</p>
                                         </div>
                                     </div>
@@ -657,7 +666,7 @@
                                                href="images/gallery/illustrations/0211302_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0211302_Easy-Resize.com.jpg">0211302</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0211302_Easy-Resize.com.jpg&name=0211302&date=February 13, 2021">0211302</a></h5>
                                             <p>February 13, 2021</p>
                                         </div>
                                     </div>
@@ -675,7 +684,7 @@
                                                href="images/gallery/cg/tipu_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=tipu_Easy-Resize.com.jpg">Tipu Sangma</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=portfolio&image_name=TIPU_SIGMA_Easy-Resize.com.jpg&name=Tipu Sangma&date=January 16, 2020">Tipu Sangma</a></h5>
                                             <p>January 16, 2020</p>
                                         </div>
                                     </div>
@@ -694,7 +703,7 @@
                                                href="images/gallery/illustrations/0210402_Easy-Resize.com.jpg"></a><span>12</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210402_Easy-Resize.com.jpg">0210402</a></h5>
+                                            <h5><a href="gallery-detail.html?image_type=illustrations&image_name=0210402_Easy-Resize.com.jpg&name=0210402&date=April 2, 2021">0210402</a></h5>
                                             <p>April 2, 2021</p>
                                         </div>
                                     </div>
@@ -712,8 +721,8 @@
                                                href="images/gallery/cg/w4-v2-_Easy-Resize.com.jpg"></a><span>3</span>
                                         </div>
                                         <div class="portfolio-title">
-                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=w4-v2-_Easy-Resize.com.jpg">Untitled</a></h5>
-                                            <p>february 3, 2020</p>
+                                            <h5><a href="gallery-detail.html?image_type=cg&image_name=w4-v2-_Easy-Resize.com.jpg&name=Untitled&date=February 3, 2020">Untitled</a></h5>
+                                            <p>February 3, 2020</p>
                                         </div>
                                     </div>
                                 </figcaption>
